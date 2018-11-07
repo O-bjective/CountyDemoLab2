@@ -15,7 +15,8 @@ def get_state_options():
         listOfStates = []
         #First step is to create a list of all states
         for county in counties:
-            if
+            if county["State"] in listOfStates:
+
                 add the county's state to listOfStates
         #Second step is to create a string containing html
         #code for the options in the select element
