@@ -20,13 +20,11 @@ def get_state_options():
             listOfStates.append(state)
     print(listOfStates)
     return listOfStates
-            #add the county's state to listOfStates
-    #Second step is to create a string containing html
-    #code for the options in the select element
-    #String options is initialized to the empty String
-    #for each state in listOfStates
-        #options = options + Markup("<option value=\""+s+"\">"+s+"</option>")
-    #return options
+    
+    for state in listOfStates:
+        options += Markup("<option value=\"" +state+ "\">" +state+ "</option>")
+        
+    return options
 
 if __name__ == "__main__":
     app.run(debug=True)
